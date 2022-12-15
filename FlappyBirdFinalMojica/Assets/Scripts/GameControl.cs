@@ -34,4 +34,18 @@ public class GameControl : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
+
+    public void BirdScored()
+    {
+        if (gameOver)
+            return;
+        score++;
+        scoreText.text = "Score: " + score.ToString();
+    }
+
+    public void BirdDied()
+    {
+        gameOvertext.SetActive(true);
+        gameOver = true;
+    }
 }
