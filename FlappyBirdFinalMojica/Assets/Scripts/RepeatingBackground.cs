@@ -13,12 +13,6 @@ public class RepeatingBackground : MonoBehaviour
         groundHorizontalLength = groundCollider.size.x;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame 
 
     private void Update ()
@@ -32,6 +26,6 @@ public class RepeatingBackground : MonoBehaviour
     private void RepositionBackground()
     {
         Vector2 groundOffSet = new Vector2(groundHorizontalLength * 2f, 0);
-        transform.position = (Vector2)transform.position + groundOffSet;
+        transform.position = (Vector2) transform.position + groundOffSet;
     }
 }
